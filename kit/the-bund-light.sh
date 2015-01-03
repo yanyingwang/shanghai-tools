@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-set -x
 #The MIT License (MIT)
 
 #Copyright (c) 2015 Yanying Wang
@@ -53,6 +52,8 @@ the_bund_light()
     fi
 }
 
+
+sleep $(($INTERVAL * 60))
 
 while :
 do
