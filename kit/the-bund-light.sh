@@ -48,7 +48,6 @@ fullscreen_app_info()
 
 the_bund_light()
 {
-    sleep $(($INTERVAL * 60))
     if [[ $SCREEN == $(active_windows_size) ]]
     then
         #gnome-screensaver-command -d
@@ -57,6 +56,7 @@ the_bund_light()
     else
         echo "$(date): fullscreen app none: sleep $INTERVAL minutes"
     fi
+    sleep $(($INTERVAL * 60))
 }
 
 
