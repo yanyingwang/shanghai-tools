@@ -22,28 +22,41 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
-# README
-# Maybe this bash script is usefull for you, if you have heard of 'caffeine' and 'lightsOn.sh'.
-# sudo apt-get install xdottool
-# I've test this script on my Ubuntu 14.10 system.
 
+INTERVAL=$1
 SCREEN=$(xdpyinfo | grep -m1 dimensions | awk '{print $2}')
 
 
-active_windows_size() {
-echo $(xwininfo -id $(xdotool getactivewindow) -stats | \
-    egrep '(Width|Height):' | \
-    awk '{print $NF}') | \
-sed -e 's/ /x/'
+active_windows_size()
+{
+    echo $(xwininfo -id $(xdotool getactivewindow) -stats | \
+            egrep '(Width|Height):' | \
+            awk '{print $NF}') | \
+        sed -e 's/ /x/'
+}
+
+fullscreen_app_info()
+{
+    xwininfo -id $(xdotool getactivewindow) -stats | \
+        grep 'xwininfo:'
+}
+
+the_bund_light()
+{
+    if [[ $SCREEN == $(active_windows_size) ]]
+    then
+        gnome-screensaver-command -d
+        echo "$(date): fullscreen app info: $(fullscreen_app_info)"
+    else
+        echo "$(date): fullscreen app none: sleep $INTERVAL minutes"
+        sleep $(($INTERVAL*60))
+    fi
 }
 
 
-
-if [[ $SCREEN == $(active_windows_size) ]]
-then
-    gnome-screensaver-command -d
-else
-    sleep 240 
-fi
+while :
+do
+    the_bund_light
+done
 
 
