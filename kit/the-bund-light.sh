@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+#set -x
 #The MIT License (MIT)
 
 #Copyright (c) 2015 Yanying Wang
@@ -21,6 +23,8 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
+
+sleep 500
 
 INTERVAL=$1
 SCREEN=$(xdpyinfo | grep -m1 dimensions | awk '{print $2}')
