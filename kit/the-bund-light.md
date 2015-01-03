@@ -25,7 +25,7 @@ add code below to `/etc/rc.local`file before `exit 0`.
 ```
 BUND=$HOME/shanghai-tools/kit/the-bund-light.sh  # the path where you put this script in
 test -x $BUND && \
-    ($BUND &> /var/log/thebundlight.log &)
+    ($BUND 4 &> /var/log/thebundlight.log &)     # '$BUND 4' mean every 4 minutes detetive one time if there is a fullscreen app running.
 ```
 
 # 注意：

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -x
 #The MIT License (MIT)
 
 #Copyright (c) 2015 Yanying Wang
@@ -49,7 +49,7 @@ the_bund_light()
         echo "$(date): fullscreen app info: $(fullscreen_app_info)"
     else
         echo "$(date): fullscreen app none: sleep $INTERVAL minutes"
-        sleep $(($INTERVAL*60))
+        sleep $(($INTERVAL * 60))
     fi
 }
 
