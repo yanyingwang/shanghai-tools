@@ -24,6 +24,8 @@
 
 INTERVAL=$1
 SCREEN=$(xdpyinfo | grep -m1 dimensions | awk '{print $2}')
+SCREENX=$(echo $SCREEN | awk -Fx '{print $1}')
+SCREENY=$(echo $SCREEN | awk -Fx '{print $2}')
 
 
 active_windows_size()
@@ -42,18 +44,17 @@ fullscreen_app_info()
 
 the_bund_light()
 {
+    sleep $(($INTERVAL * 60))
     if [[ $SCREEN == $(active_windows_size) ]]
     then
-        gnome-screensaver-command -d
+        #gnome-screensaver-command -d
+        xdotool mousemove $(($SCREENX /2)) $(($SCREENY /2))
         echo "$(date): fullscreen app info: $(fullscreen_app_info)"
     else
         echo "$(date): fullscreen app none: sleep $INTERVAL minutes"
-        sleep $(($INTERVAL * 60))
     fi
 }
 
-
-sleep $(($INTERVAL * 60))
 
 while :
 do
