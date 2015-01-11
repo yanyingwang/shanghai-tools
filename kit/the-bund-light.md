@@ -21,12 +21,11 @@ For how to use it, Please check installation part.
 sudo apt-get install xdottool
 ```
 
-add code below to `/etc/rc.local`file before `exit 0`.
+然后添加开机启动：搜索应用'启动应用程序'，然后添加这个脚本的位置+参数，比如：
 ```
-BUND=$HOME/shanghai-tools/kit/the-bund-light.sh      # the path where you put this script in
-test -x $BUND && \
-    ($BUND 4 > /var/log/thebundlight.log 2>&1 &)     # '$BUND 4' mean every 4 minutes detetive one time if there is a fullscreen app running.
+/home/wyy/shanghai-tools/kit/the-bund-light.sh 4
 ```
+
 
 # 注意：
 此脚本是基于Ubuntu系统而写，我仅在我的本机Ubuntu 14.10上面做过测试。
