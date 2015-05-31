@@ -16,14 +16,14 @@ For how to use it, Please check installation part.
 所以这个脚本的作用就是使Chrome或者firefox在Ubuntu下面全屏观看flash类的视频的时候，使屏幕保护程序不会被自动激活。  
 实际上，这个脚本目前会检测所有的应用程序，如果有应用程序在全屏运行，那么屏幕保护程序则不会被自动激活。
 
-# installion/安装
+# installation/安装
 ```
 sudo apt-get install xdottool
 ```
 
 然后添加开机启动：搜索应用'启动应用程序'，然后添加这个脚本的位置+参数，参数可不填写，此时默认为4分钟，比如：
 ```
-/home/wyy/shanghai-tools/kit/the-bund-light.sh
+~/shanghai-tools/kit/the-bund-light.sh
 ```
 
 
