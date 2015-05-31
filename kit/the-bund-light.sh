@@ -24,7 +24,13 @@
 #SOFTWARE.
 
 
-INTERVAL=$1
+if [[ $# == 0 ]]
+then
+    INTERVAL=4
+else
+    INTERVAL=$1
+fi
+
 #DISPLAY=:0
 SCREEN=$(xdpyinfo -display :0 | grep -m1 dimensions | awk '{print $2}')
 SCREENX=$(echo $SCREEN | awk -Fx '{print $1}')
@@ -58,18 +64,10 @@ the_bund_light()
     fi
 }
 
-main()
-{
-    while :
-    do
-        the_bund_light
-    done
-}
 
-if [[ $# = 1 ]]
-then
-    main
-else
-    echo "params error"
-fi
+
+while :
+do
+    the_bund_light
+done
 
