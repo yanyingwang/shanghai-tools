@@ -21,9 +21,9 @@ For how to use it, Please check installation part.
 sudo apt-get install xdottool
 ```
 
-然后添加开机启动：搜索应用'启动应用程序'，然后添加这个脚本的位置+参数，比如：
+然后添加开机启动：搜索应用'启动应用程序'，然后添加这个脚本的位置+参数，参数可不填写，此时默认为4分钟，比如：
 ```
-/home/wyy/shanghai-tools/kit/the-bund-light.sh 4
+/home/wyy/shanghai-tools/kit/the-bund-light.sh
 ```
 
 
