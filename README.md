@@ -24,6 +24,6 @@ This bash script is used to fix ubuntu14.04's bug1310346, just download and run 
 ## [init-rails-deploy.sh](https://github.com/yanyingwang/shanghai-tools/blob/master/kit/init-rails-deploy.sh)
 This is a simple rails deployment script for you if you're in hurry to deploy your rails app and doesn't have much time to configure a complicated deployment tool.
 
-## [caveman-development-init.sh](https://github.com/yanyingwang/shanghai-tools/blob/master/kit/caveman-development-init.sh)
+## [init-caveman-develop.sh](https://github.com/yanyingwang/shanghai-tools/blob/master/kit/init-caveman-develop.sh)
 This script is usefull when you're wirte a web project which using common lisp and [caveman2 framework](http://8arrow.org/caveman/). It can reload code and restart server when found out code has been changed through `git diff` cmd.
 Just run it with params `help` to show help messagees.
