@@ -27,3 +27,6 @@ This is a simple rails deployment script for you if you're in hurry to deploy yo
 ## [init-caveman-develop.sh](https://github.com/yanyingwang/shanghai-tools/blob/master/kit/init-caveman-develop.sh)
 This script is usefull when you're wirting a web project using common lisp and [caveman2 framework](http://8arrow.org/caveman/). It can reload code and restart server when found out code has been changed through `git diff` cmd.
 Just run it with params `help` to show help messagees.
+
+
+## [deploy rails app with mina nginx puma](https://github.com/yanyingwang/shanghai-tools/tree/master/kit/mina-nginx-puma)
