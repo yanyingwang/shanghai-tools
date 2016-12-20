@@ -1,3 +1,1 @@
-cp config/puma.rb /home/tech/koooffer/shared/config/ 
-
-mina puma:start -vv
+has been merged to <https://github.com/yanyingwang/mina-nginx-puma-psql>
